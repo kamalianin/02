@@ -1,0 +1,15 @@
+[
+  {"id": 1, "name": "Animals", "category": "animals", "price": 123},
+  {"id": 2, "name": "Testing", "category": "music", "price": 121},
+  {"id": 3, "name": "Clothes", "category":"food", "price": 99},
+  {"id": 4, "name": "slaminA", "category":"tourism", "price": 88},
+  {"id": 5, "name": "Qrw", "category": "animals", "price": 31},
+  {"id": 6, "name": "Chanel", "category":"tourism", "price": 52},
+  {"id": 7, "name": "Food", "category":"food", "price": 6},
+  {"id": 8, "name": "Jazz", "category": "music", "price": 76},
+  {"id": 9, "name": "Bub", "category": "animals", "price": 52},
+  {"id": 10, "name": "Chec", "category": "animals", "price": 17},
+  {"id": 11, "name": "Popi",  "category": "music", "price": 34},
+  {"id": 12, "name": "Qq", "category": "animals",  "price": 76},
+  {"id": 13, "name": "Cloth", "category":"tourism", "price": 56}
+]

@@ -1,0 +1,16 @@
+a {
+  text-decoration: none !important;
+}
+.App {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100vh;
+}
+.main-content {
+  min-height: calc(100vh - 150px);
+}
+select {
+  border: 1px solid teal;
+  padding: 3px;
+}

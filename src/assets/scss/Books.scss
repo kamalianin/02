@@ -1,0 +1,48 @@
+.booksContainer {
+  padding: 20px 0;
+  max-width: 500px;
+  margin: 0 auto;
+}
+h1 {
+  margin-bottom: 30px;
+}
+.sortContainer {
+  display: flex;
+  justify-content: space-between;
+  border-radius: 10px;
+  box-shadow: 3px 4px 8px 0px rgba(34, 60, 80, 0.2);
+  padding: 10px;
+}
+.priceBlock {
+  font-size: 18px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  transform: rotate(0deg);
+  span {
+    margin-right: 7px;
+  }
+  &.desc {
+    img {
+      transform: rotate(180deg);
+    }
+  }
+}
+.sortArrow {
+  width: 11px;
+}
+.booksElContainer {
+  padding: 20px 0;
+}
+.bookEl {
+  border: 1px solid black;
+  margin: 0 0 5px 0;
+  display: flex;
+  justify-content: space-between;
+  padding: 5px;
+  cursor: pointer;
+  &.Checked {
+    border: 1px solid green;
+  }
+}
