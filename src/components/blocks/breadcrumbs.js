@@ -2,7 +2,7 @@ import React from 'react';
 import '../../assets/scss/breadcrumbs.scss'
 import logo from "../../assets/img/logo_header.png";
 import {brandName} from "../../App";
-
+import { Button } from 'primereact/button';
 
 
 export default function App() {
@@ -17,16 +17,7 @@ export default function App() {
 function Toolbar({ onPlayMovie, onUploadImage }) {
     return (
         <div>
-            <Button onClick={onPlayMovie}>
-                Play Movie
-            </Button>
-            <Button onClick={onUploadImage}>
-                Upload Image
-            </Button>
+
         </div>
     );
-}
-
-function Button({ onClick, children }) {
-    return <button onClick={onClick}>{children}</button>;
 }

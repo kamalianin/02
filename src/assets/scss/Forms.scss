@@ -1,0 +1,17 @@
+.inputGroup {
+  margin-bottom: 20px;
+  max-width: 350px;
+  input, .passwordGroup {
+    width: 100%;
+  }
+}
+.dropdownGroup {
+  max-width: 350px;
+  margin-bottom: 20px;
+  .p-dropdown {
+    width: 100%;
+  }
+}
+.p-checkbox {
+  margin-right: 10px;
+}

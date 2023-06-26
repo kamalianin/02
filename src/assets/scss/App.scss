@@ -1,3 +1,6 @@
+body {
+  font-family: var(--font-family);
+}
 a {
   text-decoration: none !important;
 }
@@ -9,6 +12,7 @@ a {
 }
 .main-content {
   min-height: calc(100vh - 150px);
+  padding: 10px 0;
 }
 select {
   border: 1px solid teal;

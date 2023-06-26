@@ -4,11 +4,11 @@ import logo from '../../assets/img/logo_header.png'
 import {brandName} from '../../App.js'
 
 const navEls = [
-    { title: 'Новости', id: 1, href: '/news' },
-    { title: 'Раздел 1', id: 2, href: '/1' },
+    { title: 'Формы', id: 1, href: '/forms' },
+    { title: 'Книги, сортировка+сумма значений', id: 2, href: '/Books' },
     { title: 'Раздел 2', id: 3, href: '/2' },
     { title: 'Раздел 3', id: 4, href: '/3' },
-    { title: 'Контакты', id: 5, href: '/contacts' },
+    { title: 'Праймреакт', id: 5, href: '/primereact' },
 ];
 
 

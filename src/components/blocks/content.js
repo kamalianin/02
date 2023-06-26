@@ -1,25 +1,37 @@
 import React from 'react';
-import Alert from "../UI/alert";
-import Button from "../UI/button";
-import Card from "../UI/card";
-import Breadcrumbs from "./breadcrumbs";
+import {RouteObject, useRoutes} from "react-router-dom";
 import Books from "./Books";
+import Forms from "./Forms";
+import NotFound from "./notFound";
+import Main from "./main";
+import PrimereactIcons from "./primereact_icons";
 
 
+function Content() {
 
-const Content = () => {
-
-    return (
-        <div className="main-content">
-            <div className="container">
-                {/*<Breadcrumbs></Breadcrumbs>*/}
-                {/*<Alert Class='primary' Message='Алерт'></Alert>*/}
-                {/*<Button Class='primary' Message='Link' href='/news'></Button>*/}
-                {/*<Card Name='test' Text='test2' Href='/news' BtnText='btntext'></Card>*/}
-                <Books></Books>
-            </div>
-        </div>
-    );
-};
+    const ROUTES: RouteObject[] = [
+        {
+          path: '/',
+          element: <Main/>
+        },
+        {
+            path: '/books',
+            element:  <Books/>,
+        },
+        {
+            path: '/forms',
+            element: <Forms/>
+        },
+        {
+            path: 'primereact',
+            element: <PrimereactIcons/>
+        },
+        {
+            path: '*',
+            element: <NotFound/>
+        }
+    ]
+    return useRoutes(ROUTES);
+}
 
 export default Content;
