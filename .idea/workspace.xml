@@ -2,18 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4fd87ca3-e25f-4667-9c39-fecb4f987dcc" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/assets/scss/Forms.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/blocks/primereact_icons.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/scss/App.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/scss/App.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/blocks/Navbar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/blocks/Navbar.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/blocks/breadcrumbs.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/blocks/breadcrumbs.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/blocks/content.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/blocks/content.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/blocks/Forms.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/blocks/Forms.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,6 +41,7 @@
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.standard&quot;: &quot;&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;C:\\Program Files\\JetBrains\\WebStorm 2022.2\\plugins\\JavaScriptLanguage\\jsLanguageServicesImpl\\external&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
@@ -76,7 +68,8 @@
       <workItem from="1687182205293" duration="609000" />
       <workItem from="1687215189173" duration="4683000" />
       <workItem from="1687389542561" duration="56000" />
-      <workItem from="1687474186935" duration="22916000" />
+      <workItem from="1687474186935" duration="28983000" />
+      <workItem from="1687905970671" duration="9558000" />
     </task>
     <servers />
   </component>
