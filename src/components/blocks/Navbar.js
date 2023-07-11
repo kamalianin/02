@@ -6,7 +6,7 @@ import {brandName} from '../../App.js'
 const navEls = [
     { title: 'Формы', id: 1, href: '/forms' },
     { title: 'Книги, сортировка+сумма значений', id: 2, href: '/Books' },
-    { title: 'Раздел 2', id: 3, href: '/2' },
+    { title: 'Редакс раздел 1', id: 3, href: '/cards' },
     { title: 'Раздел 3', id: 4, href: '/3' },
     { title: 'Праймреакт', id: 5, href: '/primereact' },
 ];

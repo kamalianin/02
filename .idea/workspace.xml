@@ -2,8 +2,24 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4fd87ca3-e25f-4667-9c39-fecb4f987dcc" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/actions/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/blocks/cardElement.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/blocks/cardsPage.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/reducers/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/reducers/initialState.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/reducers/postsReducers.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/store.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/scss/App.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/scss/App.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/blocks/Books.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/blocks/Books.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/blocks/Forms.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/blocks/Forms.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/blocks/Navbar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/blocks/Navbar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/blocks/breadcrumbs.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/blocks/breadcrumbs.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/blocks/content.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/blocks/content.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,7 +85,12 @@
       <workItem from="1687389542561" duration="56000" />
       <workItem from="1687474186935" duration="28983000" />
       <workItem from="1687905970671" duration="9866000" />
-      <workItem from="1687960549021" duration="3253000" />
+      <workItem from="1687960549021" duration="12472000" />
+      <workItem from="1688174300940" duration="2260000" />
+      <workItem from="1688523746163" duration="670000" />
+      <workItem from="1688689391961" duration="2517000" />
+      <workItem from="1688796331797" duration="4527000" />
+      <workItem from="1688951154522" duration="63908000" />
     </task>
     <servers />
   </component>

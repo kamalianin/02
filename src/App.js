@@ -16,12 +16,12 @@ function App() {
   return (
     <div className="App">
       <Header></Header>
-    <div className="main-content">
-        <Breadcrumbs></Breadcrumbs>
-        <div className="container">
-            <Content></Content>
-        </div>
-    </div>
+      <div className="main-content">
+          <Breadcrumbs></Breadcrumbs>
+          <div className="container">
+              <Content></Content>
+          </div>
+      </div>
       <Footer></Footer>
     </div>
   );

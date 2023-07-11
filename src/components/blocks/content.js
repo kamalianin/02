@@ -5,6 +5,7 @@ import Forms from "./Forms";
 import NotFound from "./notFound";
 import Main from "./main";
 import PrimereactIcons from "./primereact_icons";
+import CardsPage from "./cardsPage";
 
 
 function Content() {
@@ -21,6 +22,10 @@ function Content() {
         {
             path: '/forms',
             element: <Forms/>
+        },
+        {
+            path: '/cards',
+            element: <CardsPage/>
         },
         {
             path: 'primereact',

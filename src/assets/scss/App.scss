@@ -18,3 +18,9 @@ select {
   border: 1px solid teal;
   padding: 3px;
 }
+.row > * {
+  margin-bottom: 1.2rem;
+}
+.cursor-pointer {
+  cursor: pointer;
+}

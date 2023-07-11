@@ -4,20 +4,12 @@ import logo from "../../assets/img/logo_header.png";
 import {brandName} from "../../App";
 import { Button } from 'primereact/button';
 
-
-export default function App() {
-    return (
-        <Toolbar
-            onPlayMovie={() => alert('Playing!')}
-            onUploadImage={() => alert('Uploading!')}
-        />
-    );
-}
-
-function Toolbar({ onPlayMovie, onUploadImage }) {
+const Breadcrumbs = () => {
     return (
         <div>
 
         </div>
     );
-}
+};
+
+export default Breadcrumbs;

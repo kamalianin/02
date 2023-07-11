@@ -20,7 +20,7 @@ const Forms = () => {
             Login: '',
             Password: '',
             PasswordRepeat: '',
-            Role: '',
+            Role: undefined,
             Date: '',
             Agreement: false,
         },
@@ -53,7 +53,6 @@ const Forms = () => {
                 let firstHolidayDate = new Date(date.getFullYear(), 11, 31, 0,0,0,0);
                 let secondHolidayDate = new Date(date.getFullYear(), 0, 1, 0,0,0,0);
                 let thirdHolidayDate = new Date(date.getFullYear(), 0,10, 23,59,59,999);
-                console.log(date - firstHolidayDate, date - secondHolidayDate, date - thirdHolidayDate)
                 if (date >= firstHolidayDate || (date >= secondHolidayDate && date <= thirdHolidayDate)) {
                     errors.Date = 'Пожалуйста, выберите дату, не выпадающую на новогодние праздники!'
                 }
