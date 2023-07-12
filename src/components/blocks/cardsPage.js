@@ -2,25 +2,12 @@ import React, {useLayoutEffect, useState} from 'react';
 import axios from "axios";
 import CardElement from "./cardElement";
 import {useDispatch, useSelector, useStore} from "react-redux";
-import {addPosts} from "../../actions";
-import {Dispatch} from "react";
 import {Button} from "primereact/button";
 import {getPostsListStore} from "../../reducers/reselector";
 
 
 
 const CardsPage = () => {
-
-
-    const getPostsList = async (dispatch) => {
-        try {
-            const response = await axios.get('https://jsonplaceholder.typicode.com/posts')
-            dispatch(addPosts(response.data))
-            return(response.data)
-        } catch(err) {
-            console.error(err)
-        }
-    }
 
     let [pageNumber, setPageNumber] = useState(1);
 
@@ -29,11 +16,6 @@ const CardsPage = () => {
     }
 
     const postsList = useSelector(getPostsListStore)
-    const dispatch: Dispatch = useDispatch()
-
-    useLayoutEffect(()=> {
-        getPostsList(dispatch)
-    },[])
 
     let counter = 6 * pageNumber;
 

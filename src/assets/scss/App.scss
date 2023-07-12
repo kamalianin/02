@@ -21,6 +21,8 @@ select {
 .row > * {
   margin-bottom: 1.2rem;
 }
-.cursor-pointer {
+.remove-card-btn {
   cursor: pointer;
+  width: fit-content;
+  padding: 5px;
 }

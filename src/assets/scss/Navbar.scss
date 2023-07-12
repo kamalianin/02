@@ -7,6 +7,7 @@
   display: flex;
   align-items: center;
   margin-right: 4rem;
+  cursor: pointer;
   .logo {
     margin-right: 20px;
   }
@@ -33,4 +34,10 @@
 
 .nav-item {
   margin-right: 2rem;
+  cursor: pointer;
+}
+
+.header_info_block {
+  display: inline-flex;
+  align-items: center;
 }

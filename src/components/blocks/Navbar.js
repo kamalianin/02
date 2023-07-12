@@ -2,6 +2,7 @@ import React from 'react';
 import '../../assets/scss/Navbar.scss'
 import logo from '../../assets/img/logo_header.png'
 import {brandName} from '../../App.js'
+import {useNavigate} from "react-router-dom";
 
 const navEls = [
     { title: 'Формы', id: 1, href: '/forms' },
@@ -13,20 +14,23 @@ const navEls = [
 
 
 
+
 const Navbar = () => {
+    const Navigator = useNavigate();
+
     const navbarItems = navEls.map((el) => (
-        <a className="nav-item" href={el.href} key={el.id}>{el.title}</a>
+        <div className="nav-item" onClick={()=>Navigator(el.href)} key={el.id}>{el.title}</div>
     ))
     return (
         <div className="navbar-wrap">
             <div className="container">
                 <div className="d-flex">
-                    <a href='/' className="brand_block">
+                    <div onClick={() => Navigator('/')} className="brand_block">
                         <div className="logo">
                             <img src={logo} alt=""/>
                         </div>
                         <div className="brand_name">{brandName}</div>
-                    </a>
+                    </div>
                     <div className="navbar">{navbarItems}</div>
                 </div>
 
