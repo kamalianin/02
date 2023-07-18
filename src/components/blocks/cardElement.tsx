@@ -1,12 +1,12 @@
 import React, {Dispatch} from 'react';
 import {useDispatch} from "react-redux";
-import {removePost} from "../../actions";
+import {removePost} from "../../reducers/postsReducers";
 
 
 
 const CardElement = ({cardTitle, cardText, cardId}) => {
 
-    const dispatch: Dispatch = useDispatch()
+    const dispatch: Dispatch<any> = useDispatch()
 
     const cardRemove = () => {
         dispatch(removePost(cardId));

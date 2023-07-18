@@ -1,7 +1,7 @@
 import React, {useLayoutEffect, useState} from 'react';
 import axios from "axios";
 import CardElement from "./cardElement";
-import {useDispatch, useSelector, useStore} from "react-redux";
+import {useSelector, useStore} from "react-redux";
 import {Button} from "primereact/button";
 import {getPostsListStore} from "../../reducers/reselector";
 
@@ -15,8 +15,7 @@ const CardsPage = () => {
         setPageNumber(++pageNumber)
     }
 
-    const postsList = useSelector(getPostsListStore)
-
+    const postsList: object = useSelector(getPostsListStore)
     let counter = 6 * pageNumber;
 
     let elems = postsList.filter((post,index) => index < counter).map((posts) =>

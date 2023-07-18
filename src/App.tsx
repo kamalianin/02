@@ -3,21 +3,15 @@ import '../node_modules/bootstrap/scss/bootstrap.scss'
 import "primereact/resources/themes/lara-light-indigo/theme.css";
 import "primereact/resources/primereact.min.css";
 import 'primeicons/primeicons.css';
-import {RouteObject, useRoutes} from "react-router-dom";
-import Main from "./components/blocks/main";
-import Books from "./components/blocks/Books";
-import Forms from "./components/blocks/Forms";
-import CardsPage from "./components/blocks/cardsPage";
-import PrimereactIcons from "./components/blocks/primereact_icons";
-import NotFound from "./components/blocks/notFound";
 import React, {Dispatch, useEffect, useLayoutEffect} from "react";
 import Layout from "./components/blocks/layout";
 import axios from "axios";
-import {addPosts} from "./actions";
-import {useDispatch} from "react-redux";
+import {useDispatch, useSelector} from "react-redux";
+import MyJson from "./books.json";
+import {addPosts} from "./reducers/postsReducers";
 
 
-export const  brandName = process.env.REACT_APP_NAME
+export const brandName:string = process.env.REACT_APP_NAME
 
 const App = React.memo(() => {
     const getPostsList = async (dispatch) => {
@@ -29,10 +23,18 @@ const App = React.memo(() => {
             console.error(err)
         }
     }
-    const dispatch: Dispatch = useDispatch()
+    const getBooksList = async (dispatch) => {
+        let MyJsonExt = MyJson.map(book => {
+            return {...book, checked: false}
+        })
+        // dispatch(addBooks(MyJsonExt))
+    }
+    const dispatch: Dispatch<any> = useDispatch()
     useLayoutEffect(()=> {
-        getPostsList(dispatch)
+        let posts = getPostsList(dispatch)
+        let books = getBooksList(dispatch)
     },[])
+
   return (
     <div className="App">
         <Layout></Layout>

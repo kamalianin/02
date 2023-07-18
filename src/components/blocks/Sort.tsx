@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import sortArrow from '../../assets/img/arrow.png'
 import '../../assets/scss/Books.scss'
-import Select from '../UI/Select.js'
+import Select from '../UI/Select.tsx'
 import MyJson from '../../books.json'
-import './booksList.js';
+import './booksList.tsx';
 
 let cats = [];
 let Categories =  MyJson.map((elem) => {

@@ -1,5 +1,5 @@
 import React from 'react';
-import '../blocks/Books.js'
+import '../blocks/Books.tsx'
 
 
 const Select = ({optionEls, onChange}) => {

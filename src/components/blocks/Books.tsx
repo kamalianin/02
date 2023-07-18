@@ -3,7 +3,8 @@ import Sort from "./Sort";
 import BooksList from "./booksList";
 import TotalCount from "./totalCount";
 import MyJson from "../../books.json";
-import {useDispatch} from 'react-redux';
+import {useSelector} from 'react-redux';
+import {getBooksListStore} from "../../reducers/reselector";
 
 
 
@@ -12,12 +13,9 @@ const Books = () => {
         return {...book, checked: false}
     })
 
+    const booksList = useSelector(getBooksListStore)
 
-    const dispatch = useDispatch();
-
-    // store.dispatch({ type: 'SET_BOOKS', payload: books });
     const [booksData, setBooksData] = useState(MyJsonExt)
-
 
     function filterBooks(value) {
         if(value !== 'every') {

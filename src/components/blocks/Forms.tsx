@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React from 'react';
 import { InputText } from 'primereact/inputtext';
 import { Password } from 'primereact/password';
 import '../../assets/scss/Forms.scss'
@@ -6,7 +6,7 @@ import { Dropdown } from 'primereact/dropdown';
 import { Calendar } from 'primereact/calendar';
 import { Checkbox } from 'primereact/checkbox';
 import { Button } from 'primereact/button';
-import {Formik, useFormik, ErrorMessage} from 'formik';
+import {useFormik} from 'formik';
 
 const Forms = () => {
     const dropdownOptions1 = [{role: 'Клиент', value: 1},
@@ -26,7 +26,7 @@ const Forms = () => {
         },
         onSubmit: () => {console.log(formik.values)},
         validate:  (values) => {
-            const errors = {};
+            let errors:object = {}
             if(values.Login.length < 6) {
                 errors.Login = 'Логин слишком короткий, минимум 6 символов';
             }
