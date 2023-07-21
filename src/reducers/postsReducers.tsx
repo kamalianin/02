@@ -25,7 +25,6 @@ const postsReducer = createReducer(initialState,
     (builder) => {
     builder
         .addCase(addPosts, (state, action) => {
-            console.log(action.payload)
             state.postsList = state.postsList.concat(action.payload)
         })
         .addCase(removePost, (state, action) => {

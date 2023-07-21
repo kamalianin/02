@@ -3,8 +3,18 @@
   <component name="ChangeListManager">
     <list default="true" id="4fd87ca3-e25f-4667-9c39-fecb4f987dcc" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/store.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/blocks/BookElement.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/blocks/BookElement.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/blocks/Books.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/blocks/Books.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/blocks/Sort.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/blocks/Sort.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/blocks/booksList.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/blocks/booksList.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/blocks/breadcrumbs.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/blocks/breadcrumbs.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/blocks/footer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/blocks/footer.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/blocks/totalCount.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/blocks/totalCount.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/reducers/booksReducers.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/reducers/booksReducers.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/reducers/postsReducers.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/reducers/postsReducers.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/reducers/reselector.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/reducers/reselector.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/store.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -77,7 +87,8 @@
       <workItem from="1688796331797" duration="4527000" />
       <workItem from="1688951154522" duration="79445000" />
       <workItem from="1689692170436" duration="12520000" />
-      <workItem from="1689711293995" duration="10697000" />
+      <workItem from="1689711293995" duration="18361000" />
+      <workItem from="1689877024072" duration="13650000" />
     </task>
     <servers />
   </component>

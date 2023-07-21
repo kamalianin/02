@@ -1,9 +1,13 @@
-import React, { useState } from 'react';
+import React  from 'react';
 import sortArrow from '../../assets/img/arrow.png'
 import '../../assets/scss/Books.scss'
 import Select from '../UI/Select.tsx'
 import MyJson from '../../books.json'
 import './booksList.tsx';
+import {TypedUseSelectorHook, useDispatch, useSelector} from "react-redux";
+import {AppDispatch, RootState} from "../../store";
+import {getBooksListStoreTotalPrice, getSortByPriceStatus} from "../../reducers/reselector";
+import {filterBooksByGroup, filterBooksByPrice} from "../../reducers/booksReducers";
 
 let cats = [];
 let Categories =  MyJson.map((elem) => {
@@ -22,10 +26,37 @@ let catsFinal = [{title: 'every', id: 0, option: 'every'}, ...cats.map((cat) => 
     return rest
 })]
 
-const Sort = ({isSortAsc, sortValue, filterBooks}) => {
+
+
+
+
+const Sort = () => {
     const onSelectChange = (e) =>{
         filterBooks(e.target.value);
     }
+    const selector: TypedUseSelectorHook<RootState> = useSelector
+    const isSortAsc = selector(getSortByPriceStatus)
+
+    function filterBooks(value:string) {
+        filterBooksFunc(dispatch, value)
+    }
+
+    const filterBooksFunc = async (dispatch, type:string) => {
+        dispatch(filterBooksByGroup(type))
+    }
+
+    const sortValue = () => {
+        sortFunc(dispatch);
+    };
+
+    const sortFunc = async (dispatch) => {
+        dispatch(filterBooksByPrice())
+    }
+
+    type DispatchFunc = () => AppDispatch
+
+    const dispatch: DispatchFunc = useDispatch()
+
     return (
         <div className='container'>
             <div className='sortContainer'>

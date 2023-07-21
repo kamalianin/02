@@ -9,7 +9,8 @@ import axios from "axios";
 import {useDispatch, useSelector} from "react-redux";
 import MyJson from "./books.json";
 import {addPosts} from "./reducers/postsReducers";
-
+import {addBooks} from "./reducers/booksReducers";
+import {AppDispatch} from "./store";
 
 export const brandName:string = process.env.REACT_APP_NAME
 
@@ -24,12 +25,13 @@ const App = React.memo(() => {
         }
     }
     const getBooksList = async (dispatch) => {
-        let MyJsonExt = MyJson.map(book => {
+        let MyJsonExt:object = MyJson.map(book => {
             return {...book, checked: false}
         })
-        // dispatch(addBooks(MyJsonExt))
+        dispatch(addBooks(MyJsonExt))
     }
-    const dispatch: Dispatch<any> = useDispatch()
+    type DispatchFunc = () => AppDispatch
+    const dispatch: DispatchFunc = useDispatch()
     useLayoutEffect(()=> {
         let posts = getPostsList(dispatch)
         let books = getBooksList(dispatch)

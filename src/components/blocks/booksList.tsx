@@ -1,13 +1,32 @@
-import React, { useState } from 'react';
-// import axios from "axios";
 import BookElement from "./BookElement";
+import {TypedUseSelectorHook, useDispatch, useSelector} from "react-redux";
+import {AppDispatch, RootState} from "../../store";
+import {getBooksListStore, getBooksListStoreTotalPrice} from "../../reducers/reselector";
+import {changeBooksStatus} from "../../reducers/booksReducers";
 
 
-const BooksList = ({booksData, bookElClick}) => {
+const BooksList = () => {
+
+    const selector: TypedUseSelectorHook<RootState> = useSelector
+
+    const books = selector(getBooksListStore)
+
+    type DispatchFunc = () => AppDispatch
+
+    const dispatch: DispatchFunc = useDispatch()
+
+    const changeBooksStatusFunc = async (dispatch, book) => {
+        dispatch(changeBooksStatus(book))
+    }
+
+    function bookElClick(book) {
+        changeBooksStatusFunc(dispatch, book);
+    }
+
 
     return (
         <div className='booksElContainer'>
-            {booksData.map((book) => (
+            {books.map((book) => (
                 <BookElement key={book.id} book={book} onClick={bookElClick}></BookElement>
             ))}
         </div>

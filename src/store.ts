@@ -1,6 +1,6 @@
 import {configureStore } from "@reduxjs/toolkit";
 import postsReducer from "./reducers/postsReducers";
-import booksReducer from "./reducers/booksReducers";
+import {reducer as booksReducer} from "./reducers/booksReducers";
 
 
 const store = configureStore({
@@ -10,9 +10,13 @@ const store = configureStore({
     }
 })
 
-// const subscribe = store.subscribe(() =>
-//     console.log(store.getState())
-// )
+const subscribe = store.subscribe(() =>
+    console.log(store.getState())
+)
+
+
+export type RootState = ReturnType<typeof store.getState>
+export type AppDispatch = typeof store.dispatch
 
 // subscribe();
 
