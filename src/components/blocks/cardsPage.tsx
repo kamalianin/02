@@ -1,5 +1,4 @@
-import React, {useLayoutEffect, useState} from 'react';
-import axios from "axios";
+import React, {useState} from 'react';
 import CardElement from "./cardElement";
 import {useSelector, useStore} from "react-redux";
 import {Button} from "primereact/button";
@@ -15,8 +14,10 @@ const CardsPage = () => {
         setPageNumber(++pageNumber)
     }
 
-    const postsList: object = useSelector(getPostsListStore)
+    const postsList = useSelector(getPostsListStore)
     let counter = 6 * pageNumber;
+
+
 
     let elems = postsList.filter((post,index) => index < counter).map((posts) =>
         <CardElement key={posts.id} cardId={posts.id} cardTitle={posts.title} cardText={posts.body}></CardElement>
@@ -29,6 +30,8 @@ const CardsPage = () => {
     } else {
         counter = postsList.length;
     }
+
+
 
     return (
         <div className="cardsPageContainer">

@@ -2,9 +2,14 @@ import React, {Dispatch} from 'react';
 import {useDispatch} from "react-redux";
 import {removePost} from "../../reducers/postsReducers";
 
+type cardElementsType = {
+    cardTitle: string,
+    cardText: string,
+    cardId: number
+}
 
 
-const CardElement = ({cardTitle, cardText, cardId}) => {
+const CardElement = ({cardTitle, cardText, cardId}:cardElementsType) => {
 
     const dispatch: Dispatch<any> = useDispatch()
 

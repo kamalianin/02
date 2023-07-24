@@ -5,7 +5,12 @@ const alert = {
     alertClass: 'alert ',
 }
 
-const Alert = ({Class, Message}) => {
+type alertProps = {
+    Class: string,
+    Message: string
+}
+
+const Alert = ({Class, Message}:alertProps) => {
     let ClassText = ''
     if (Class) {
         ClassText = 'alert-' + Class;

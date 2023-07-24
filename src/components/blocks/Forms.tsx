@@ -7,26 +7,43 @@ import { Calendar } from 'primereact/calendar';
 import { Checkbox } from 'primereact/checkbox';
 import { Button } from 'primereact/button';
 import {useFormik} from 'formik';
+import {type} from "@testing-library/user-event/dist/type";
 
 const Forms = () => {
+    type formType = {
+        Login: string,
+        Password: string,
+        PasswordRepeat: string,
+        Role: undefined|string,
+        Date: undefined|Date,
+        Agreement: boolean,
+    }
+    type formError = {
+        Login?: string,
+        Password?: string,
+        PasswordRepeat?: string,
+        Role?: string,
+        Date?: string,
+        Agreement?: string,
+    }
     const dropdownOptions1 = [{role: 'Клиент', value: 1},
                             {role: 'Сотрудник офиса', value: 2},
                             {role: 'Менеджер по продажам', value: 3}]
     const minDateValue = new Date(2022, 0, 1);
     const maxDateValue = new Date()
 
-    const formik = useFormik({
+    const formik = useFormik<formType>({
         initialValues: {
             Login: '',
             Password: '',
             PasswordRepeat: '',
             Role: undefined,
-            Date: '',
+            Date: undefined,
             Agreement: false,
         },
         onSubmit: () => {console.log(formik.values)},
         validate:  (values) => {
-            let errors:object = {}
+            let errors:formError = {}
             if(values.Login.length < 6) {
                 errors.Login = 'Логин слишком короткий, минимум 6 символов';
             }
@@ -45,7 +62,7 @@ const Forms = () => {
             if (values.Role === undefined || values.Role === '') {
                 errors.Role = 'Не выбрана роль';
             }
-            if (values.Date === '') {
+            if (values.Date === undefined) {
                 errors.Date = 'Дата не выбрана';
             }
             if (values.Date) {
@@ -57,7 +74,7 @@ const Forms = () => {
                     errors.Date = 'Пожалуйста, выберите дату, не выпадающую на новогодние праздники!'
                 }
             }
-            if (values.Agreement === false) {
+            if (!values.Agreement) {
                 errors.Agreement = 'Вам необходимо согласиться с правилами!';
             }
             console.log(errors)
@@ -67,7 +84,7 @@ const Forms = () => {
     return (
         <form className="formContainer" onSubmit={formik.handleSubmit}>
             <div className="inputGroup">
-                <InputText className={formik.submitCount && formik.errors.Login ? 'p-invalid': ''}  id="Login" name="Login" placeholder="Логин" keyfilter="alphanum" size="32" maxLength="32" required  onChange={formik.handleChange} value={formik.values.Login} />
+                <InputText className={formik.submitCount && formik.errors.Login ? 'p-invalid': ''}  id="Login" name="Login" placeholder="Логин" keyfilter="alphanum" size={32} maxLength={32} required  onChange={formik.handleChange} value={formik.values.Login} />
                 {formik.submitCount && formik.errors.Login ? <div className="errors">{formik.errors.Login}</div>:''}
             </div>
 

@@ -7,7 +7,15 @@ const button = {
     href: ''
 }
 
-const Button = ({Class, Message, Value, Type, href}) => {
+type buttonProps = {
+    Class: string,
+    Message: string,
+    Value: string,
+    Type: string,
+    href: string
+}
+
+const Button = ({Class, Message, Value, Type, href}:buttonProps) => {
     let buttonClass = button.buttonClass;
     if(Class) {
         buttonClass = buttonClass + 'btn-' + Class;

@@ -1,36 +1,43 @@
 import React from 'react';
-import {createSlice} from "@reduxjs/toolkit";
+import {createSlice, PayloadAction} from "@reduxjs/toolkit";
+
+type booksState = {
+    booksList: booksList,
+    filteredBooksList: booksList,
+    booksCheckedValue: number,
+    isSortAsc: boolean,
+}
 
 export type booksList = Array<singleBook>
 
-type singleBook = {
-    key: number,
+export type singleBook = {
+    key?: number,
     id: number,
     name: string,
     category: string,
-    price: number
+    price: number,
+    checked?: boolean
 }
 
 let booksListInitial: booksList = []
 
-const initialState = {
+const initialState:booksState = {
     booksList: booksListInitial,
     filteredBooksList: [],
     booksCheckedValue: 0,
     isSortAsc: true,
 }
 
-function sortByField(field, asc) {
+function sortByField(field:string, asc:number) {
     if(asc) {
-        return (a, b) => a[field] > b[field] ? 1 : -1
-
+        return (a:any, b:any) => a[field] > b[field] ? 1 : -1
     } else {
-        return (a, b) => a[field] > b[field] ? -1 : 1
+        return (a:any, b:any) => a[field] > b[field] ? -1 : 1
     }
 }
 
-Array.prototype.diff = function(a) {
-    return this.filter(function(i){return a.indexOf(i) < 0;});
+const diff = function(a:Array<any>, b:Array<any>):Array<any> {
+    return a.filter(function(i){return b.indexOf(i) < 0;});
 };
 
 
@@ -38,15 +45,15 @@ export const booksSlice = createSlice({
     name: 'books',
     initialState,
     reducers: {
-        addBooks(state, {payload: books}:object){
-           state.booksList = state.booksList.concat(books)
+        addBooks(state, action:PayloadAction<booksList>){
+           state.booksList = state.booksList.concat(action.payload)
         },
-        changeBooksStatus(state, {payload: book}:object){
-            !book.checked ? state.booksCheckedValue += book.price : state.booksCheckedValue -= book.price;
+        changeBooksStatus(state, action:PayloadAction<singleBook>) {
+            !action.payload.checked ? state.booksCheckedValue += action.payload.price : state.booksCheckedValue -= action.payload.price;
 
             state.booksList = state.booksList.map((bookbook => {
-                if(bookbook.id === book.id) {
-                    return {...bookbook, checked: !book.checked}
+                if(bookbook.id === action.payload.id) {
+                    return {...bookbook, checked: !action.payload.checked}
                 } else {
                     return bookbook;
                 }
@@ -62,13 +69,12 @@ export const booksSlice = createSlice({
             }
         },
         filterBooksByGroup(state, {payload: type}) {
-            console.log(type)
             if(type !== 'every') {
                 state.booksList = state.booksList.concat(state.filteredBooksList);
                 const filteredBooks = state.booksList.filter( book => {
                     return book.category.toLowerCase().includes(type.toLowerCase())
                 })
-                state.filteredBooksList = state.booksList.diff(filteredBooks);
+                state.filteredBooksList = diff(state.booksList, filteredBooks);
                 state.booksList = filteredBooks;
             } else {
                 state.booksList = state.booksList.concat(state.filteredBooksList)
@@ -81,22 +87,3 @@ export const booksSlice = createSlice({
 
 export const { reducer } = booksSlice
 export const { addBooks, changeBooksStatus, filterBooksByPrice, filterBooksByGroup } = booksSlice.actions
-
-
-// export default function booksReducer(state = initialState, action) {
-//     switch(action.type) {
-//         case "CHANGE_BOOK_STATE": {
-//             return {
-//                 ...state,
-//             }
-//         }
-//         case "ADD_BOOKS": {
-//             return {
-//                 booksList: [...state.booksList.concat(action.payload.booksList)]
-//             }
-//         }
-//         default:
-//             return state;
-//     }
-// }
-//

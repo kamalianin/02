@@ -1,10 +1,16 @@
 import React from 'react';
 import '../../assets/scss/Navbar.scss'
 import logo from '../../assets/img/logo_header.png'
-import {brandName} from '../../App.tsx'
+import {brandName} from '../../App'
 import {useNavigate} from "react-router-dom";
 
-const navEls: object = [
+type navElsObj = {
+    title: string,
+    id: number,
+    href: string
+}
+
+const navEls: Array<navElsObj> = [
     { title: 'Формы', id: 1, href: '/forms' },
     { title: 'Книги, сортировка+сумма значений', id: 2, href: '/Books' },
     { title: 'Редакс раздел 1', id: 3, href: '/cards' },

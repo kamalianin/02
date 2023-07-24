@@ -1,6 +1,6 @@
 import React from 'react';
 import '../../assets/scss/footer.scss';
-import {brandName} from '../../App.tsx'
+import {brandName} from '../../App'
 import {TypedUseSelectorHook, useSelector} from "react-redux";
 import {getPostsListStoreLength} from "../../reducers/reselector";
 import {RootState} from "../../store";

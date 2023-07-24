@@ -2,19 +2,31 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4fd87ca3-e25f-4667-9c39-fecb4f987dcc" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/@types/media.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Api.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/UI/Select.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/UI/Select.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/UI/alert.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/UI/alert.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/UI/button.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/UI/button.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/UI/card.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/UI/card.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/blocks/BookElement.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/blocks/BookElement.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/blocks/Books.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/blocks/Books.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/blocks/Forms.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/blocks/Forms.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/blocks/Navbar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/blocks/Navbar.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/blocks/Sort.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/blocks/Sort.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/blocks/booksList.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/blocks/booksList.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/blocks/breadcrumbs.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/blocks/breadcrumbs.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/blocks/cardElement.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/blocks/cardElement.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/blocks/cardsPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/blocks/cardsPage.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/blocks/footer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/blocks/footer.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/blocks/totalCount.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/blocks/totalCount.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/reducers/booksReducers.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/reducers/booksReducers.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/reducers/index.tsx" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/reducers/postsReducers.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/reducers/postsReducers.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/reducers/reselector.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/reducers/reselector.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/store.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/store.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/tsconfig.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,9 +60,12 @@
     &quot;list.type.of.created.stylesheet&quot;: &quot;SCSS&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.standard&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.standard&quot;: &quot;&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;web-ide.project.structure&quot;,
     &quot;ts.external.directory.path&quot;: &quot;D:\\react_practice\\02\\node_modules\\typescript\\lib&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
@@ -88,12 +103,47 @@
       <workItem from="1688951154522" duration="79445000" />
       <workItem from="1689692170436" duration="12520000" />
       <workItem from="1689711293995" duration="18361000" />
-      <workItem from="1689877024072" duration="13650000" />
+      <workItem from="1689877024072" duration="14458000" />
+      <workItem from="1690164725383" duration="4006000" />
+      <workItem from="1690223229785" duration="4271000" />
+      <workItem from="1690227570776" duration="534000" />
+      <workItem from="1690228120956" duration="321000" />
+      <workItem from="1690228454527" duration="115000" />
+      <workItem from="1690228579062" duration="7114000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+    <option name="exactExcludedFiles">
+      <list>
+        <option value="$PROJECT_DIR$/src/components/blocks/Forms.js" />
+        <option value="$PROJECT_DIR$/src/components/blocks/cardsPage.js" />
+        <option value="$PROJECT_DIR$/src/components/UI/alert.js" />
+        <option value="$PROJECT_DIR$/src/components/blocks/layout.js" />
+        <option value="$PROJECT_DIR$/src/Api.js" />
+        <option value="$PROJECT_DIR$/src/components/blocks/Sort.js" />
+        <option value="$PROJECT_DIR$/src/components/blocks/main.js" />
+        <option value="$PROJECT_DIR$/src/reducers/booksReducers.js" />
+        <option value="$PROJECT_DIR$/src/components/blocks/Navbar.js" />
+        <option value="$PROJECT_DIR$/src/components/blocks/Books.js" />
+        <option value="$PROJECT_DIR$/src/components/UI/Select.js" />
+        <option value="$PROJECT_DIR$/src/components/blocks/header.js" />
+        <option value="$PROJECT_DIR$/src/components/blocks/breadcrumbs.js" />
+        <option value="$PROJECT_DIR$/src/components/blocks/BookElement.js" />
+        <option value="$PROJECT_DIR$/src/components/blocks/cardElement.js" />
+        <option value="$PROJECT_DIR$/src/components/blocks/primereact_icons.js" />
+        <option value="$PROJECT_DIR$/src/components/blocks/footer.js" />
+        <option value="$PROJECT_DIR$/src/components/UI/button.js" />
+        <option value="$PROJECT_DIR$/src/reducers/reselector.js" />
+        <option value="$PROJECT_DIR$/src/components/blocks/booksList.js" />
+        <option value="$PROJECT_DIR$/src/components/UI/card.js" />
+        <option value="$PROJECT_DIR$/src/components/blocks/totalCount.js" />
+        <option value="$PROJECT_DIR$/src/store.js" />
+        <option value="$PROJECT_DIR$/src/components/blocks/notFound.js" />
+        <option value="$PROJECT_DIR$/src/reducers/postsReducers.js" />
+      </list>
+    </option>
   </component>
   <component name="UnknownFeatures">
     <option featureType="com.intellij.fileTypeFactory" implementationName=".env" />

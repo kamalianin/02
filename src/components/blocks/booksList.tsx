@@ -1,8 +1,9 @@
 import BookElement from "./BookElement";
 import {TypedUseSelectorHook, useDispatch, useSelector} from "react-redux";
-import {AppDispatch, RootState} from "../../store";
-import {getBooksListStore, getBooksListStoreTotalPrice} from "../../reducers/reselector";
-import {changeBooksStatus} from "../../reducers/booksReducers";
+import {RootState} from "../../store";
+import {getBooksListStore} from "../../reducers/reselector";
+import {changeBooksStatus, singleBook} from "../../reducers/booksReducers";
+import {AnyAction, Dispatch} from "redux";
 
 
 const BooksList = () => {
@@ -11,15 +12,13 @@ const BooksList = () => {
 
     const books = selector(getBooksListStore)
 
-    type DispatchFunc = () => AppDispatch
+    const dispatch = useDispatch()
 
-    const dispatch: DispatchFunc = useDispatch()
-
-    const changeBooksStatusFunc = async (dispatch, book) => {
+    const changeBooksStatusFunc = async (dispatch: Dispatch<AnyAction>, book:singleBook) => {
         dispatch(changeBooksStatus(book))
     }
 
-    function bookElClick(book) {
+    function bookElClick(book:singleBook) {
         changeBooksStatusFunc(dispatch, book);
     }
 

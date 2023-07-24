@@ -1,6 +1,14 @@
 import React from 'react';
 
-const Card = ({ImgPath, Name, Text, Href, BtnText}) => {
+type cardProps = {
+    ImgPath: string,
+    Name: string,
+    Text: string,
+    Href: string,
+    BtnText: string
+}
+
+const Card = ({ImgPath, Name, Text, Href, BtnText}:cardProps) => {
     let ImageContent = <></>;
     if (ImgPath) {
        ImageContent = <img src={ImgPath} className="card-img-top" alt="Изображение"/>

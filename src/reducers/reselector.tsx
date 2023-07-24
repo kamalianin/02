@@ -1,8 +1,8 @@
 import { createSelector } from "reselect";
-import '../store'
+import {RootState} from "../store";
 
 export const getCardsStore = createSelector(
-    (store) => store,
+    (store:RootState) => store,
     (store) => store.postsReducer
 )
 
@@ -17,7 +17,7 @@ export const getPostsListStoreLength = createSelector(
 )
 
 export const getBooksList = createSelector(
-    (store) => store,
+    (store:RootState) => store,
     (store) => store.booksReducer
 )
 

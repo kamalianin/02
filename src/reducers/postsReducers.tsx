@@ -19,7 +19,7 @@ const initialState = {
 }
 
 export const addPosts = createAction<postsList>('ADD_POSTS')
-export const removePost = createAction<{postId:number}>('REMOVE_POST');
+export const removePost = createAction<number>('REMOVE_POST');
 
 const postsReducer = createReducer(initialState,
     (builder) => {

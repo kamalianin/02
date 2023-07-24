@@ -1,18 +1,30 @@
 import React  from 'react';
 import sortArrow from '../../assets/img/arrow.png'
 import '../../assets/scss/Books.scss'
-import Select from '../UI/Select.tsx'
+import Select from '../UI/Select'
 import MyJson from '../../books.json'
 import './booksList.tsx';
 import {TypedUseSelectorHook, useDispatch, useSelector} from "react-redux";
 import {AppDispatch, RootState} from "../../store";
 import {getBooksListStoreTotalPrice, getSortByPriceStatus} from "../../reducers/reselector";
 import {filterBooksByGroup, filterBooksByPrice} from "../../reducers/booksReducers";
+import {AnyAction, Dispatch} from "redux";
 
-let cats = [];
-let Categories =  MyJson.map((elem) => {
-    if (!cats.includes(elem.category)) {
-        cats.push(elem.category)
+type MyJsonElement = {
+    "id": number,
+    "name": string,
+    "category": string,
+    "price": number,
+    option: string,
+    title: string
+}
+
+let cats:Array<catsType> = [];
+let Categories:Array<MyJsonElement> =  MyJson.map((elem) => {
+    if (!cats.find(el => el.option === (elem.category))) {
+        cats.push({...elem,
+            title: elem.category,
+            option: elem.category})
     }
     return  ({
         ...elem,
@@ -20,9 +32,14 @@ let Categories =  MyJson.map((elem) => {
         option: elem.category
 })})
 
+type catsType = {
+    id: number,
+    option: string,
+    title: string
+}
 
 let catsFinal = [{title: 'every', id: 0, option: 'every'}, ...cats.map((cat) => {
-    let {name, price, category, ...rest} = Categories.find(category=>category.category===cat)
+    let {name, price, category, ...rest} = Categories.find(category => category.category === cat.option) as MyJsonElement
     return rest
 })]
 
@@ -31,7 +48,9 @@ let catsFinal = [{title: 'every', id: 0, option: 'every'}, ...cats.map((cat) => 
 
 
 const Sort = () => {
-    const onSelectChange = (e) =>{
+    const dispatch = useDispatch()
+
+    const onSelectChange = (e:React.ChangeEvent<HTMLInputElement>) =>{
         filterBooks(e.target.value);
     }
     const selector: TypedUseSelectorHook<RootState> = useSelector
@@ -41,7 +60,7 @@ const Sort = () => {
         filterBooksFunc(dispatch, value)
     }
 
-    const filterBooksFunc = async (dispatch, type:string) => {
+    const filterBooksFunc = async (dispatch: Dispatch<AnyAction>, type:string) => {
         dispatch(filterBooksByGroup(type))
     }
 
@@ -49,13 +68,12 @@ const Sort = () => {
         sortFunc(dispatch);
     };
 
-    const sortFunc = async (dispatch) => {
+    const sortFunc = async (dispatch: Dispatch<AnyAction>) => {
         dispatch(filterBooksByPrice())
     }
 
-    type DispatchFunc = () => AppDispatch
 
-    const dispatch: DispatchFunc = useDispatch()
+
 
     return (
         <div className='container'>
